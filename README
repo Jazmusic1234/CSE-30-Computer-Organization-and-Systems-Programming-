@@ -1,0 +1,171 @@
+/*
+ * Filename: README
+ * Author: Jasmine Chen
+ * UserId: cs30xax
+ * Date: 4/5/2019
+ * Sources of Help: Stack Overflow, sample README, www.roe.ac.uk, geeksforgeeks
+ * 	ANSI C card
+ */
+
+Description: 
+	Creates an array of odd numbers with the specified length and then 
+	prints it, prints it in reverse, and then prints it in order. It 
+	also prints out the average of the 3 arguments.
+
+How to compile: 
+	use the command 'make' to compile
+
+How to run:
+	use the command './a.out arg1 arg2 arg3' where arg1, arg2, and arg3 
+	are actual numbers
+
+Example of normal output: 
+	$./a.out 1 3 5
+	1
+	3
+	5
+	7
+	9
+	
+	9
+	7
+	5
+	3
+	1
+
+	1
+	3
+	5
+	7
+	9
+
+	The integer average of (1 + 3 + 5) / 3 = 3
+
+Example of abnormal output:
+	$./a.out 135
+	
+	Usage: ./a.out v1 v2 v3
+	prints arrays forward and in reverse, prints the average of v1, v2, v3
+
+How I tested my program: 
+	using the compile errors and GDB, I was able to debug my code and I 
+	compared it to the reference solution to test that it was giving the
+	correct output
+
+PA specific questions: 
+	0) They are trying to pass of someone else's work as their own in order
+	to obtain a higher grade, so it is an integrity violation
+
+	1) pa0.c, line 79, added ';' at the end of the printf statement on line 78
+	   pa0.c, line 99, added end bracket after line 99
+	   printInOrder.c, line 24, added "#include <stdio.h>'
+
+	2) initArray.c, line 24, added "i++" after line 25
+	   printReversed.c, line 25, changed the for loop counter from "i++" to "i--"
+	   printInOrder.c, line 25, changed the for loop condition from "i <= length" to "i < length"
+	   pa0.c, line 96, changed printf statement from "v1, v1, v1" to "v1, v2, v3"
+	   average3.s, line 46, added "r3, r3, r2"
+	   average3.s, line 51, changed "r3, r0, r1" to "r0, r3, r1"
+
+	3) --argc; //Discount the program name as part of the argument count
+
+	4) a. stays on the same line but assembly code changes
+	   b. "nexti" executes machine code
+
+	5) average3()
+
+	6) 0
+
+	7) 4
+
+	8) 3, p $r1, i r
+
+	9) The last element of intArray 
+
+	10) a. The address of the last element of the array is 0x7efffb0c 
+	    b. 29
+
+	11) 0x7efffb2c is the intArray 
+	    0x00010818 is the list register
+
+	12) a. A breakpoint is a stopping point in the code that the user can
+	    set in order to debug the code
+	    b. use 'break <line>' to set a breakpoint by replacing <line> with 
+	    a line number or the name of a method
+
+	13) the 'continue' command continues running the program till it 
+	reaches the next breakpoint or the program finishes running
+
+	14) foobar
+
+	15) a. 'next' shows you the next line of code while 'step' actually 
+	steps into a function and calls the function
+	    b. 'step/next' are for programming code while 'stepi/nexti' are for 
+	    assembly code
+
+	16) printf( "%c\n", 64 );
+
+	17) unsigned hexadecimal: printf( "%x\n", n );
+	    unsigned octal: printf( "%o\n", n );
+	    signed hexadecimal: printf( "%i\n", n );
+	    signed octal: printf( "%i\n", n);
+
+	18) printf( "%s %d %c %.1f\n", rocks, value, plus, thirty );
+
+	19) printf( "The size of char is: %d\n", sizeof(char));
+	    printf( "The size of short is: %d\n", sizeof(short);
+	    printf( "The size of int is: %d\n", sizeof(int));
+	    printf( "The size of long is: %d\n", sizeof(long));
+	    printf( "The size of float is: %d\n", sizeof(float));
+
+
+
+Compile Time Errors:
+
+	pa0.c:79:3: error: expected ';' before '}' token
+   	}
+   	^
+	File: pa0.c
+	Line: 79
+	Correction: added ';' at the end of the printf statement on line 78
+
+
+	pa0.c:99:3: error: expected declaration or statement at end of input
+   	return EXIT_SUCCESS;
+   	^
+	File: pa0.c
+	Line: 99
+	Correction: add end bracket after line 99
+
+
+	warning: implicit declaration of function 'fprintf'	
+	File: printInOrder.c
+	Line: 24
+	Correction: added "#include <stdio.h>"
+
+Runtime Errors:
+
+	infinite loop
+	File: initArray.c
+	Line: 24-25
+	Correction: added "i++;" after line 25
+
+	garbage values and segmentation fault
+	File: printReversed.c
+	Line: 25
+	Correction: changed the for loop counter from "i++" to "i--"
+
+	extra number at the end of printInOrder output
+	File: printInOrder.c
+	Line: 25 
+	Correction: changed the for loop condition from "i <= length" to "i < length"
+
+	integer average statement should say "(1 + 3 + 5)" not "(1 + 1 + 1)"
+	File: pa0.c
+	Line: 96 
+	Correction: change printf statement from "v1, v1, v1" to "v1, v2, v3"
+
+	integer average is incorrect
+	File: average3.s
+	Line: 46, 51 
+	Correction: added "r3, r3, r2" and change "r3, r0, r1" to "r0, r3, r1"
