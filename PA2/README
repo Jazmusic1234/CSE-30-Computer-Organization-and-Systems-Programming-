@@ -1,0 +1,120 @@
+/*
+ * Filename: README
+ * Author: Jasmine Chen
+ * UserId: cs30xax
+ * Date: 5/6/2019
+ * Sources of help: ccm.net, kb.iu.edu
+ */
+
+Description:
+User can manipulate the bits that produce a 8x8 image using different commands.
+
+
+Compiling:
+User should be in the pa2 directory where all the source files.
+Use the command 'make' to compile the program
+
+
+Running:
+./pa2 <char on> <char off>
+
+The command line arguments are optional. The user can enter no args, 1 arg, or
+2 args. The first one <char on> is the character that will represent the on
+bits. The second command line argument <char off> is the character that will
+represent the off bits. If no arguments are entered, the default on and off
+characters, '@' and '-' respecitvely, will be used.
+
+Ex) ./pa2 * ~
+
+
+Normal output:
+Normal output goes to stdout
+
+Ex) ./pa2
+  Bit ops:
+  	set    part0 part1 -- Turns pixels on where part0/part1 bits are 1.
+  	clear  part0 part1 -- Turns pixels off where part0/part1 bits are 1.
+  	toggle part0 part1 -- Flips pixels where part0/part1 bits are 1.
+  	invert             -- Flips all pixels in the image.
+  Strings:
+  	character c -- Sets the character c into the image.
+        	         Allowed characters: A-Z, a-z, 0-9.
+  	say str     -- Displays characters from str as a sequence of images.\n" \
+  Movement:
+  	scrollHorizontal offset   -- Scrolls image horizontally.
+        	                         positive offset scrolls right
+                	                 negative offset scrolls left
+  	scrollVertical offset     -- Scrolls image vertically.
+                	                 positive offset scrolls down
+                        	         negative offset scrolls up
+  	translate offsetH offsetV -- Scrolls image offsetH horizontally and
+        	                       offsetV vertically.
+  Misc:
+  	help -- Shows this help message.
+
+  Press Ctrl + D to exit.
+
+  >>> character f
+  --------
+  -@@@@@@-
+  -@------
+  -@@@@---
+  -@------
+  -@------
+  -@------
+  --------
+  >>>
+
+
+Abnormal output:
+If the user types a command that is not valid or uses the wrong number
+of arguments, the program prints an error message to stdout.
+
+Ex) ./pa2 3 % @
+
+Usage: ./pa2 [on [off]]
+	on -- The character printed for pixels that are on. Defaults to @.
+	off -- The character printed for pixels that are off. Defaults to -.
+
+Both on and off must be single characters int he ASCII range [32, 126].
+
+
+Testing:
+I tested that all the writeup examples worked and that all the error statements
+printed when there were errors.
+
+./pa2
+
+>>> set 
+
+Missing argument(s) for command.
+
+
+Questions:
+
+1. mv foo.txt foobar.txt
+
+2. cp ../midwest/simpleboy.txt copy.txt
+
+3. it pastes text
+
+4. 
+	a) a file that controls layout and features of vim
+	b) vim .vimrc
+
+5.
+	a) dd
+	b) p
+
+6. /string
+
+7. :set number
+
+8. ~/fubar
+
+9. 
+	a) chmod
+	b) chmod g+w
+
+10. It is respectful to their fellow engineers and they get to keep their 
+jobs

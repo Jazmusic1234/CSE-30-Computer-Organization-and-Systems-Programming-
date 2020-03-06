@@ -1,0 +1,59 @@
+==== Testing processArgs.c ====
+No filename:                   PASSED, (+0.50)
+Help flag:                     PASSED, (+0.50)
+line number short flag:        PASSED, (+0.50)
+regexp flag:                   PASSED, (+0.50)
+bad regex:                     PASSED, (+0.50)
+multiple flags:                PASSED, (+0.50)
+unrecognized flag:             PASSED, (+0.50)
+multiple files:                PASSED, (+0.50)
+all nonhelp flags:             PASSED, (+0.50)
+repeat flag:                   PASSED, (+0.50)
+Total for file processArgs.c: 5.00
+
+Total so far: 5.00/15.00
+
+==== Testing lineMatchesRegex.s ====
+Regex string matches:          PASSED, (+0.50)
+Regex string no matches:       PASSED, (+0.50)
+Regex string empty:            PASSED, (+0.50)
+Regex string w/*:              PASSED, (+0.50)
+Empty line string:             PASSED, (+0.50)
+Complicated Regex:             PASSED, (+0.50)
+Total for file lineMatchesRegex.s: 3.00
+
+Total so far: 8.00/15.00
+
+==== Testing lineShouldBePrinted.c ====
+Line matches:                  PASSED, (+0.50)
+Line matches, v flag:          PASSED, (+0.50)
+Line does not match:           PASSED, (+0.50)
+Line does not match, v flag:   PASSED, (+0.50)
+Total for file lineShouldBePrinted.c: 2.00
+
+Total so far: 10.00/15.00
+
+==== Testing readLine.c ====
+One line file:                 PASSED, (+0.50)
+One word file:                 PASSED, (+0.50)
+Multiple Line file:            PASSED, (+0.50)
+Multiple Word file:            PASSED, (+0.50)
+Line Less max:                 PASSED, (+0.50)
+Line Equal max:                PASSED, (+0.50)
+Line Greater max:              PASSED, (+0.50)
+Line Greater max a lot:        PASSED, (+0.50)
+Empty file:                    PASSED, (+0.50)
+============================
+Pass ONE of the below cases for full credit
+You should pass the first one for final submission
+Newline file return empty:     PASSED, (+0.50)
+Newline file return NULL:      FAILED, (+0.00)
+============================
+
+Total for file readLine.c: 5.00
+
+Total so far: 15.00/15.00
+
+
+Final total: 15.00/15.00
+

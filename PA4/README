@@ -1,0 +1,81 @@
+/*
+ * Filename: README
+ * Author: Jasmine Chen
+ * UserId: cs30xax
+ * Date: 6/1/2019
+ * Sources of help: linux.com, swcarpentry.github.io 
+ */
+
+Description:
+The user can search through files for certain patterns using the different
+flags.
+
+
+Compiling:
+User must be in pa4 directory where all the sources files are located.
+Use the command 'make mygrep' to compile program
+
+
+Running:
+Use './mygrep' to run program
+
+./mygrep [flags] [pattern] [file]
+
+Flag are optional:
+"-i"/"--ignore-case" ignores cases and prints out lines that match pattern
+"-v"/"--invert-match prints out lines that do not match pattern 
+"-n"/"--line-number" prints out lines that match pattern with line number 
+"-c"/"--count" prints out how many times that pattern appears in file(s), 
+"--help" prints out the usage statement
+"-e"/"regexp" allows user to change up where they put the pattern when inputting
+
+pattern is required
+
+files are optional and user can use as many as they want
+
+ex)
+./mygrep -n hello file1
+1: HELLO WORLD
+
+
+Normal output:
+normal output goes to stdout
+
+ex) ./mygrep -c hello file1
+1
+
+
+Abnormal output:
+abnormal output goes to stderr
+
+ex) ./mygrep -e
+./mygrep: option requires an argument -- 'e'
+
+
+
+Testing:
+I tested all the error and normal tests from the writeup and made sure all the 
+error statements worked and checked more test cases with the example program
+
+
+
+
+1. :%s/early/often/g
+
+2. command > file	( > redirects output of command into file )
+   command1 | command2	( | redirects the output of command1 to become arg of 
+   			command2)
+
+3. malloc - takes 1 arg, the size of memory that it needs to allocated and it
+	doesn't initialize the memory so the memory holds garbage values
+   calloc - takes 2 args, the number of memory blocks and the size of each block
+   	that it needs to allocate and it initializes the memory to 0 after 
+	allocating it
+   realloc - takes 2 args, the pointer to the memory that needs to be 
+   	reallocated and the new size of the block of memory. It creates a new 
+	block of memory that is the size specified and copies everything from 
+	the old memory block to the new one. Then, it frees the old piece of
+	memory and sets the pointer to point at the new block of memory.
+
+4. Respect, honesty, and fairness. I know that I earned the grade that I got
+which makes me feel proud of my achievements.

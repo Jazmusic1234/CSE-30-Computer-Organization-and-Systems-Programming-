@@ -1,0 +1,75 @@
+/*
+ * Filename: README
+ * Author: Jasmine Chen
+ * UserId: cs30xax
+ * Date: 5/22/2019
+ * Sources of help: writeup
+ */
+
+Description:
+The program reads in data from a directory and keeps track of how many of each
+word are in each decade. The user can input cammands to print a plot or a data
+table.
+
+
+Compiling:
+User should be in pa3 directory where all source files are.
+Use 'make pa3' to compile program
+
+
+Running:
+./pa3 [-n numSlots] [-s size] [-h]
+
+Command line args are optional. The first arg is to specify the number of slots,
+the second is to specify the size of the files, and the third is to show the 
+the usage statement. Number of slots defaults to 11. File size defaults to 50.
+
+Ex) ./pa3 -n 30
+
+
+Normal output:
+Normal output goes to stdout
+
+Ex) ./pa3
+Commands:
+	plot	word -- Display a plot showing a word's popularity over time.
+	data 	word -- List word occurrences by decade for a word
+	help	     -- Display the message
+
+
+Abnormal output:
+If user enters command that is invalid or uses wrong number of args, program 
+prints error message to stdout.
+
+Ex) ./pa3 420
+
+	Extra argument '420' encountered.
+
+
+Testing:
+I tested that all the writeup examples worked and that all the error statements
+printer when there were errors.
+
+
+Questions:
+1. <tab>
+
+2. 
+
+3. 
+a) 9 * sizeof(wordData_t)
+b) calloc is allocating 9 blocks of memory with size  sizeof(wordData_t)
+
+4. 
+
+5. 
+a) & gives the address of the object
+b) * gives the value of the object
+
+6. Select some text and then use 'U' to convert to uppercase and 'u' to
+convert to lowercase
+
+7. '.' repeats the last executed command
+
+8. Tell them to ask questions on piazza. Pretend you went to sleep already. 
+Tell them they can just work harder on the next PA.
