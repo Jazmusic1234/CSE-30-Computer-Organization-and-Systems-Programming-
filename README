@@ -1,0 +1,127 @@
+/*
+ * Filename: README
+ * Author: Jasmine Chen
+ * UserId: cs30xax
+ * Date: 4/22/2019
+ * Sources of Help: writeup, README guidelines, stackoverflow, VI/VIM
+ * 	worksheets, GDB Quick Reference
+ */
+
+Description: 
+The user can give the program what size they want the CoolS to be and 
+a character that they want to fill the CoolS with. Then, the program prints
+out the CoolS. The size must be between 3 and 103 and in the format 4n+3.
+
+
+Compiling:
+The user should be in the pa1 directory. All source files should also be in
+the pa1 directory. The "make" command will compile all the files.
+
+
+Running: 
+./pa1 <size> <fillChar> is the command for running the program. Replace
+<size> with a number between 3 and 103 increasing by 4, meaning 3, 7, 11,...
+And replace <fillChar> with any single character between ascii range of
+32 and 126.
+
+Ex) ./pa1 11 o 
+
+
+Normal output:
+Normal output goes to stdout
+
+Ex) ./pa1 3 o
+ ^
+/o\
+\\/
+/\\
+\o/
+ v
+
+
+Abnormal output:
+Abnormal output goes to stderr
+
+Ex) ./pa1 1
+Usage: ./pa1 size fillChar
+  size: equal to the maximum width of the Cool S
+    -- must be in the interval [3, 103]
+    -- must be of the form (size = 4n + 3)
+    	where n is some integer
+  fillChar: used for filling in the Cool S
+    -- must be a single character
+    -- must be within the ASCII range [32, 126]
+
+Ex) ./pa1 300 b
+Error: size must be an integer of the format 4n + 3
+
+
+Testing:
+I tested all the milestone functions to make sure that when an error occurred,
+the proper return value was returned and that they worked the way they are 
+supposed to. 
+
+Usage: ./pa1 size fillChar
+  size: equal to the maximum width of the Cool S
+    -- must be in the interval [3, 103]
+    -- must be of the form (size = 4n + 3)
+    	where n is some integer
+  fillChar: used for filling in the Cool S
+    -- must be a single character
+    -- must be within the ASCII range [32, 126]
+I tested that this error would be returned if the user did not provide
+2 arguments and then, I tested that the proper error would be shown
+when each of the above requirements were not met.
+
+
+
+README Questions:
+
+1. line 17, the spacing is slightly different
+   line 49, average3V1.s has a tab at the beginning of the line while average3V3.s does not
+   line 59, average3V3.s has a line 59 while average3V1.s does not
+
+2. *x = *x * *x
+
+3. argc will be 6 because it stands for argument count and the command
+has 6 arguments
+
+4. 
+a) dd
+b) ndd
+
+5. 
+a) yy
+b) p
+
+6.
+a) :set nu
+b) :set nonu
+
+7. 
+a) xG
+b) gg
+c) G
+
+8.
+a) 10j
+b) 10k
+
+9. git diff
+
+10. print nptr
+
+11. print endptr
+
+12. 
+a) print result
+b) info reg r0
+
+13. p/c &endptr
+
+14. 
+
+15. print errno
+
+16. I made sure to list all my sources of help and only used allowed sources
+of help
